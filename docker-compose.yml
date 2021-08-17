@@ -1,0 +1,19 @@
+version: "3"
+services:
+    upload-labs:
+        image: spaceskynet/upload-labs
+        volumes: 
+            - ./docker/php.ini:/usr/local/etc/php/conf.d/php.ini
+            - ./docker/php.ini:/usr/local/etc/php/php.ini
+            - ./docker/docker-php.conf:/etc/apache2/conf-available/docker-php.conf
+            - ./src:/var/www/html
+        environment:
+            TZ: Asia/Shanghai
+        restart: always
+        ports:
+            - "8080:80"
+        networks:
+            - default
+
+networks:
+    default: 

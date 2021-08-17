@@ -1,6 +1,7 @@
 <p align="center">
-  <img title="portainer" src='img/logo.png' />
+  <img title="portainer" src='src/img/logo.png' />
 </p>
+
 
 <p align="center">
   <img title="portainer" src='https://img.shields.io/badge/version-0.1-brightgreen.svg' />
@@ -10,21 +11,21 @@
 
 ---
 
-**upload-labs是一个使用php语言编写的，专门收集渗透测试和CTF中遇到的各种上传漏洞的靶场。旨在帮助大家对上传漏洞有一个全面的了解。目前一共20关，每一关都包含着不同上传方式。**
+**upload-labs是一个使用php语言编写的，专门收集渗透测试和CTF中遇到的各种上传漏洞的靶场。旨在帮助大家对上传漏洞有一个全面的了解。目前一共21关，每一关都包含着不同上传方式。**
 
 ## 0x01 Screenshot
 
 #### 1.1 主界面
 
-![主界面](doc/index.jpg)
+![主界面](src/doc/index.jpg)
 
 #### 1.2 每一关
 
-![每一关](doc/pass.jpg)
+![每一关](src/doc/pass.jpg)
 
 #### 1.3 查看代码
 
-![代码](doc/code.jpg)
+![代码](src/doc/code.jpg)
 
 ## 0x02 Install
 
@@ -68,15 +69,29 @@ $ docker pull c0ny1/upload-labs
 $  docker run -d -p 80:80 upload-labs:latest
 ```
 
+#### 2.4 docker-compose 快速搭建(By: SpaceSkyNet)
+
+
+```sh
+$ cd upload-labs/docker
+$ docker-compose up -d
+```
+
+若要自行build镜像，请使用
+
+```sh
+$ docker-compose -f docker-compose-build.yml up -d
+```
+
 ## 0x03 Summary
 
 #### 3.1 靶机包含漏洞类型分类
 
-![上传漏洞分类](doc/mind-map.png)
+![上传漏洞分类](src/doc/mind-map.png)
 
 #### 3.2 如何判断上传漏洞类型?
 
-![判断上传漏洞类型](doc/sum_up.png)
+![判断上传漏洞类型](src/doc/sum_up.png)
 
 ## 0x04 Thanks
 
